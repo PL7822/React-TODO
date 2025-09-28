@@ -54,7 +54,7 @@ glitch-todo/
 
 1. Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/glitch-todo.git
+[git clone ](https://github.com/PL7822/React-TODO)
 cd glitch-todo
  
 2. Install dependencies:
