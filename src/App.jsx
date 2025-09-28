@@ -5,11 +5,33 @@ import "./TrippyButton.css"; // Trippy button CSS
 export default function App() {
   const [text, setText] = useState("");
   const [list, setList] = useState([]);
+  const [editIndex, setEditIndex] = useState(null); // कोणता item edit चालू आहे ते
 
   const addTodo = () => {
     if (!text.trim()) return;
-    setList([...list, text.trim()]);
+
+    if (editIndex !== null) {
+      // Edit mode मध्ये असल्यास update कर
+      const updatedList = [...list];
+      updatedList[editIndex] = text.trim();
+      setList(updatedList);
+      setEditIndex(null); // edit mode संपला
+    } else {
+      // Add mode
+      setList([...list, text.trim()]);
+    }
+
     setText("");
+  };
+
+  const deleteTodo = (index) => {
+    const updatedList = list.filter((_, i) => i !== index);
+    setList(updatedList);
+  };
+
+  const editTodo = (index) => {
+    setText(list[index]); // input मध्ये जुना text टाक
+    setEditIndex(index);  // edit mode सुरू
   };
 
   return (
@@ -43,8 +65,12 @@ export default function App() {
               if (e.key === "Enter") addTodo();
             }}
           />
-          <label htmlFor="holo-input" className="input-label" data-text="ADD_TODO">
-           ADD_TODO
+          <label
+            htmlFor="holo-input"
+            className="input-label"
+            data-text={editIndex !== null ? "UPDATE_TODO" : "ADD_TODO"}
+          >
+            {editIndex !== null ? "UPDATE_TODO" : "ADD_TODO"}
           </label>
 
           <div className="input-border"></div>
@@ -68,20 +94,62 @@ export default function App() {
 
       {/* Trippy Button */}
       <div
-        className="container"
-        onClick={addTodo}
-        style={{ marginTop: 220, cursor: "pointer" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: 40 }}
       >
-        <div className="text" data-text="ADD">
-          ADD
+        <div className="container" onClick={addTodo} style={{ cursor: "pointer" }}>
+          <div className="text" data-text={editIndex !== null ? "UPDATE" : "ADD"}>
+            {editIndex !== null ? "UPDATE" : "ADD"}
+          </div>
         </div>
       </div>
 
+
+
       {/* Todo List */}
-      <ul style={{ marginTop: 16, paddingLeft: 20 }}>
+      <ul style={{ marginTop: 16, paddingLeft: 20, listStyle: "none" }}>
         {list.map((item, i) => (
-          <li key={i} style={{ marginBottom: 6 }}>
-            {item}
+          <li
+            key={i}
+            style={{
+              marginBottom: 10,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              background: "#1a1a1a",
+              padding: "6px 10px",
+              borderRadius: "4px",
+            }}
+          >
+            <span>{item}</span>
+            <div>
+              <button
+                onClick={() => editTodo(i)}
+                style={{
+                  marginRight: 6,
+                  padding: "4px 10px",
+                  border: "none",
+                  borderRadius: "3px",
+                  background: "#00f2ea",
+                  color: "#0d0d0d",
+                  cursor: "pointer",
+                }}
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => deleteTodo(i)}
+                style={{
+                  padding: "4px 10px",
+                  border: "none",
+                  borderRadius: "3px",
+                  background: "#ff4444",
+                  color: "#fff",
+                  cursor: "pointer",
+                }}
+              >
+                Delete
+              </button>
+            </div>
           </li>
         ))}
       </ul>

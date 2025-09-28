@@ -27,7 +27,7 @@
 }
 
 body {
-  background: #fefefe;
+  background: #adc5cc;
   padding: 0;
   margin: 0;
   color: #fff;
@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@ body {
   background: #efefef;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px rgb(3, 234, 246);
   user-select: none;
 }
 
@@ -54,7 +54,7 @@ body {
   opacity: 0;
   width: 40px;
   height: 2px;
-  background: #fff;
+  background: #ffffff;
   border-bottom: 2px solid #000;
   position: absolute;
   top: 50%;
