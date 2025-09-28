@@ -3,6 +3,8 @@
 A visually stunning **Glitch Todo App** built with **React**. This project features a cyberpunk-inspired UI with a **glitchy input box** and a **trippy animated ADD button**.
 
 ---
+## 🌐 Live Demo  
+[👉 Click Here to View Live Demo](https://react-doto.netlify.app/)
 
 ## 🔥 Features
 
@@ -69,10 +71,11 @@ npm start
 4. Open http://localhost:3000
  to see the app.
 
-## ✨ Author
+## 🔗 Links
 
-Name: PRITAM LENDALE 
+- **Hosted Application**: [Fitness-Website](https://react-doto.netlify.app/)  
+- **GitHub Repository**: [Fitness-Website GitHub](https://github.com/PL7822/React-TODO)
+- **linkedin Profile**: [linkedin](https://www.linkedin.com/in/pritam-lendale-398172353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)  
 
-Email: pritamlendale@gmail.com
 
-GitHub/Portfolio: [PL7822](https://github.com/PL7822)
+   
