@@ -71,8 +71,8 @@ npm start
 
 ## ✨ Author
 
-Pritam Lendale
-
-GitHub: @PL7822
+Name: PRITAM LENDALE 
 
 Email: pritamlendale@gmail.com
+
+GitHub/Portfolio: [PL7822](https://github.com/PL7822)
