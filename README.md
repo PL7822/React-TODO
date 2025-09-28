@@ -1,16 +1,78 @@
-# React + Vite
+# Glitch Todo React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually stunning **Glitch Todo App** built with **React**. This project features a cyberpunk-inspired UI with a **glitchy input box** and a **trippy animated ADD button**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## React Compiler
+- **Glitch Input Box**  
+  Animated floating label with holo-glow effects and data stream bars.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Trippy Add Button**  
+  Cyberpunk-style animated button with color-shifting and movement effects.
 
-## Expanding the ESLint configuration
+- **Responsive Design**  
+  Works on desktop and mobile screens.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Todo List Functionality**  
+  - Add todos by pressing **Enter** or clicking the **ADD button**.
+  - Display todos dynamically below the input.
+
+- **Cool UI Effects**  
+  - Glitch animations on input focus  
+  - Animated trippy button hover effects  
+  - Background and text animation effects
+
+---
+
+## 🛠 Tech Stack
+
+- **React** - For building the interactive UI  
+- **CSS** - Custom animations for glitch and trippy effects  
+- **JavaScript** - State management using React hooks (`useState`)
+
+---
+
+## 📂 Project Structure
+
+glitch-todo/
+├── public/
+│ └── index.html
+├── src/
+│ ├── App.jsx
+│ ├── index.js
+│ ├── index.css
+│ └── TrippyButton.css
+├── package.json
+└── README.md
+
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+
+git clone https://github.com/YOUR_USERNAME/glitch-todo.git
+cd glitch-todo
+ 
+2. Install dependencies:
+
+npm install
+
+3. Start the development server:
+
+npm start
+
+
+4. Open http://localhost:3000
+ to see the app.
+
+## ✨ Author
+
+Pritam Lendale
+
+GitHub: @PL7822
+
+Email: pritamlendale@gmail.com
