@@ -1,5 +1,7 @@
 # Glitch Todo React App
 
+My personal portfolio   <a href="https://68d1a2d92f3bbf7602ea7cab--portfolio-master-pritam.netlify.app/" target="_blank">Pritam_Lendale</a>
+
 A visually stunning **Glitch Todo App** built with **React**. This project features a cyberpunk-inspired UI with a **glitchy input box** and a **trippy animated ADD button**.
 
 ---
